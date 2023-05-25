@@ -26,12 +26,14 @@ export default {
                 pic: require("../images/swiper2.jpg")
             }, {
                 pic: require("../images/swiper3.png")
-            }]
+            }],
         }
     },
     async mounted() {
         var res = await getBanner(1);
-        console.log(res.data.banners[1].pic)
+        console.log(res)
+        // console.log(this.imgs)
+        this.imgs = res.data.banners;
         var mySwiper = new Swiper("#swiperIndex", {
             // loop:true,
             // el: ".swiper-container",
