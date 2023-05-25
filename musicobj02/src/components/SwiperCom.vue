@@ -1,11 +1,71 @@
 <template>
-    <div>
-        我是swipercom
+    <div id="swipercom">
+        <div class="swiper-container" id="swiperIndex">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" v-for="(item, index) in imgs" :key="index">
+                    <img :src="item.pic" alt="">
+                </div>
+            </div>
+            <!-- 分页器 -->
+            <div class="swiper-pagination"></div>
+        </div>
     </div>
 </template>
 
 <script>
+import 'swiper/css/swiper.css'
+import Swiper from 'swiper'
+import { getBanner } from "@/api/index.js"  //@指的是项目目录 src
 export default {
-    name: "swipercom"
+    name: "swipercom",
+    data() {
+        return {
+            imgs: [{
+                pic: require("../images/swiper1.jpg")
+            }, {
+                pic: require("../images/swiper2.jpg")
+            }, {
+                pic: require("../images/swiper3.png")
+            }]
+        }
+    },
+    async mounted() {
+        var res = await getBanner(1);
+        console.log(res.data.banners[1].pic)
+        var mySwiper = new Swiper("#swiperIndex", {
+            // loop:true,
+            // el: ".swiper-container",
+            // // clickable: true,
+            // autoplay: true,
+            // 分页器
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true
+            }
+        })
+    }
 }
 </script>
+
+
+
+<style lang="less">
+#swipercom {
+    width: 7.5rem;
+
+    #swiperIndex.swiper-container {
+        width: 7.1rem;
+        height: 2.6rem;
+        border-radius: 0.1rem;
+
+        .swiper-slide img {
+            width: 100%;
+        }
+
+        .swiper-pagination-bullet-active {
+            background-color: orangered;
+        }
+
+    }
+}
+</style>
