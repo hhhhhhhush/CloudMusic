@@ -34,11 +34,12 @@ export default {
         console.log(res)
         // console.log(this.imgs)
         this.imgs = res.data.banners;
+        // console.log(this.imgs)
         var mySwiper = new Swiper("#swiperIndex", {
-            // loop:true,
+            loop:true,
             // el: ".swiper-container",
             // // clickable: true,
-            // autoplay: true,
+            autoplay: true,
             // 分页器
             pagination: {
                 el: ".swiper-pagination",
