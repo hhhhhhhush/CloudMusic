@@ -20,18 +20,12 @@ export default {
     name: "swipercom",
     data() {
         return {
-            imgs: [{
-                pic: require("../images/swiper1.jpg")
-            }, {
-                pic: require("../images/swiper2.jpg")
-            }, {
-                pic: require("../images/swiper3.png")
-            }],
+            imgs: [{},{},{},{},{},{}],
         }
     },
     async mounted() {
         var res = await getBanner(1);
-        console.log(res)
+        console.log(res.data.banners)
         // console.log(this.imgs)
         this.imgs = res.data.banners;
         // console.log(this.imgs)

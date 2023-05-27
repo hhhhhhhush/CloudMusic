@@ -53,7 +53,7 @@ export default {
         onMounted(async () => {  //view与model绑定成功之后
             const res = await getpersonalized(15)
             musiclis.musics = res.data.result;
-            console.log(musiclis.musics)
+            // console.log(musiclis.musics)
             
         })
 
