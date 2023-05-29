@@ -1,6 +1,19 @@
 <template>
   <router-view />
+  <play-controller-vue></play-controller-vue>
 </template>
+
+<script>
+import PlayControllerVue from "@/components/PlayController.vue"
+export default {
+  components: {
+    PlayControllerVue
+  }
+}
+</script>
+
+
+
 
 <style lang="less">
 * {

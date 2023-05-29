@@ -34,7 +34,7 @@ export default {
             // el: ".swiper-container",
             // // clickable: true,
             autoplay: true,
-            // 分页器
+            // 分页器   
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true

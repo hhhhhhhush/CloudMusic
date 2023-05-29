@@ -7,8 +7,15 @@ export function getBanner(type=1) {
     return axios.get(`${baseUrl}/banner?type=${type}`);
 }
 
+//封装音乐列表
 export function getpersonalized(limit=1){
     return axios.get(`${baseUrl}/personalized?limit=${limit}`);
 }
+
+//封装歌单详情
+export function getMusicDetail(id){
+    return axios.get(`${baseUrl}/playlist/detail?id=${id}`);
+}
+
 // 对外抛出
-export default { getBanner,getpersonalized };
+export default { getBanner,getpersonalized,getMusicDetail };
