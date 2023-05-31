@@ -6,12 +6,13 @@
             </svg>
         </div>
         <div class="topCenter">
-            <span class="navBtn">我的</span>
+            <span class="navBtn" @click="$router.push('/me')">我的</span>
             <span class="navBtn active">发现</span>
             <span class="navBtn">云村</span>
             <span class="navBtn">视频</span>
         </div>
-        <div class="topRight">
+        <!-- 编程式路由跳转 -->
+        <div class="topRight" @click.stop.prevent="$router.push('/search')">
             <svg class="icon" aria-hidden="true">
                 <use xlink:href="#icon-search"></use>
             </svg>

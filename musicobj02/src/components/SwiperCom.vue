@@ -25,7 +25,7 @@ export default {
     },
     async mounted() {
         var res = await getBanner(1);
-        console.log(res.data.banners)
+        // console.log(res.data.banners)
         // console.log(this.imgs)
         this.imgs = res.data.banners;
         // console.log(this.imgs)

@@ -3,7 +3,7 @@
         <img class="bg" :src="playlist.coverImgUrl" alt="">
         <div class="listViewTopNav">
             <div class="back">
-                <svg class="icon" aria-hidden="true" @click="   $router.go(-1)">
+                <svg class="icon" aria-hidden="true" @click="$router.go(-1)">
                     <use xlink:href="#icon-sdf"></use>
                 </svg>
                 <div class="title">

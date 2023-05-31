@@ -50,7 +50,7 @@ export default {
         }
         const musiclis = reactive({ musics: [] });
         onMounted(async () => {  //view与model绑定成功之后
-            const res = await getpersonalized(15)
+            const res = await getpersonalized(20)
             musiclis.musics = res.data.result;
             // console.log(musiclis.musics)
 
@@ -127,12 +127,15 @@ export default {
                     right: 0.1rem;
                     top: 0.1rem;
                     font-size: 0.24rem;
-                    color: #fefefe;
+                    color: #fff;
                     display: flex;
                     align-items: center;
+                    background-color: rgba(0,0,0,.4);
+                    border-radius: 0.2rem;
+                    padding: 0.04rem 0.08rem;
 
                     .icon {
-                        fill: #fefefe;
+                        fill: #fff;
                     }
                 }
             }
